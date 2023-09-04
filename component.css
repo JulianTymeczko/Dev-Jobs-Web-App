@@ -25,6 +25,36 @@
 body{
     font-family: 'Kumbh Sans', sans-serif;
 }
+
+
+
+
+
+/* this is for the anchors/buttons ======================== */
+
+.padded-anchor{
+  
+    padding: 15px 35px;
+    font-size: var(--body);
+    color: var(--white);
+    background-color: var(--violet);
+  
+  text-decoration: none;
+  border-radius: 5px;
+}
+.padded-anchor:hover{
+    opacity: .65;
+}
+
+
+
+
+
+
+
+
+/* this is the job cards ======================== */
+
 .job-card{
     background-color: var(--white);
     padding: 0px 0px 30px 30px;
@@ -42,7 +72,7 @@ body{
     transform: translateY(-50%);
 }
 .job-card h2{
-    color: var(--gray);
+    color: var(--dark-grey);
     font-size: var(--body);
     margin-bottom: 20px;
     font-weight: 300;

@@ -30,6 +30,98 @@ body {
     background-color: var(--light-grey);
 }
 
+
+/* this is the nav section  */
+nav{
+    background-image: url(./devjobs-web-app/starter-code/assets/desktop/bg-pattern-header.svg);
+    padding: 50px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);
+    border-bottom-left-radius: 100px;
+    margin-bottom: 150px;    
+}
+#nav-top-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.dark-or-light-mode{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 
+this is for the night and light mode slider ====== */
+
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 23px;
+  }
+  
+ 
+  .switch input {
+    display: none;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--white);
+    transition: 0.5s;
+    border-radius: 34px;
+  }
+  
+ 
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--violet);
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  
+ 
+  
+  input:checked + .slider:before {
+    transform: translateX(27px);
+  }
+
+/* this is the bottom nav section ===================== */
+
+  #nav-bottom-div{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  #nav-bottom-div div{
+    height: 50px;
+    background-color: white;
+   align-self: center;
+  }
+  .search-bar{
+    flex: 0.45;
+    border-right: 2.5px solid var(--light-grey);
+}
+.filter-location{
+    flex: 0.25;
+    border-right: 2.5px solid var(--light-grey);
+}
+.full-time-only{
+    flex: 0.3;
+    border-right: 2.5px solid var(--light-grey);
+}
 /* main */
 /* this is the jobs section */
 
