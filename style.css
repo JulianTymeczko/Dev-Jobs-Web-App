@@ -1,0 +1,46 @@
+:root {
+    --h1: 28px;
+    --h1-line-height: 34px;
+    --h2: 24px;
+    --h2-line-height: 29px;
+    --h3: 20px;
+    --h3-line-height: 24px;
+    --h4: 14px;
+    --h4-line-height: 18px;
+    --body: 16px;
+    --body-line-height: 26px;
+
+
+
+    --violet: #5964E0;
+    --light-violet: rgb(147, 155, 244);
+    --very-dark-blue: rgb(25, 32, 45);
+    --midnight-black: rgb(18, 23, 33);
+    --white: rgb(255, 255, 255);
+    --light-grey: rgb(244, 246, 248);
+    --gray: rgb(157, 174, 194);
+    --dark-grey: rgb(110, 128, 152);
+
+
+    --left-and-right-body-gutter: 10%;
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--light-grey);
+}
+
+/* main */
+/* this is the jobs section */
+
+
+main {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+    row-gap: 100px;
+    margin: 0px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);
+
+}
+
