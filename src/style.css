@@ -142,7 +142,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     row-gap: 100px;
-    margin: 0px var(--left-and-right-body-gutter) 150px var(--left-and-right-body-gutter);
+    margin: 0px var(--left-and-right-body-gutter) 100px var(--left-and-right-body-gutter);
 
 }
 
@@ -150,9 +150,27 @@ main {
   position: absolute;
  left: calc(50% - 70px);
  bottom: -150px;
+ 
 }
+
+
+footer{
+  height: 150px;
+}
+
+
+
+
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  
+  :root{
+    --left-and-right-body-gutter: 6%;
+  }
+  main{
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 15px;
+   
+  }
+
 }
 
 
@@ -161,5 +179,10 @@ main {
 
 
 @media screen and (max-width: 767px) {
-  
+  :root{
+    --left-and-right-body-gutter: 6%;
+  }
+  main{
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
