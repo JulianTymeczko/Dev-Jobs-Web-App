@@ -14,5 +14,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <App/>
     <App/>
     <App/>
+    <a href="#" className="padded-anchor" id="load-more">Load More</a>
   </React.StrictMode>,
 )

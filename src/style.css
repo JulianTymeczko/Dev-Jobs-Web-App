@@ -137,16 +137,20 @@ this is for the night and light mode slider ====== */
 
 
 main {
-
+  position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 40px;
     row-gap: 100px;
-    margin: 0px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);
+    margin: 0px var(--left-and-right-body-gutter) 150px var(--left-and-right-body-gutter);
 
 }
 
-
+#load-more{
+  position: absolute;
+ left: calc(50% - 70px);
+ bottom: -150px;
+}
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   
 }
