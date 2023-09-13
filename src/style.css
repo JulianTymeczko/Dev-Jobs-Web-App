@@ -33,7 +33,9 @@ body {
 
 /* this is the nav section  */
 nav{
-    background-image: url(./devjobs-web-app/starter-code/assets/desktop/bg-pattern-header.svg);
+    background-image: url(../devjobs-web-app/starter-code/assets/desktop/bg-pattern-header.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 50px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);
     border-bottom-left-radius: 100px;
     margin-bottom: 150px;    
@@ -42,7 +44,7 @@ nav{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
+  margin-bottom: 30px;
 }
 .dark-or-light-mode{
     display: flex;
@@ -103,16 +105,22 @@ this is for the night and light mode slider ====== */
   #nav-bottom-div{
     display: flex;
     flex-direction: row;
-    
+  
   }
   #nav-bottom-div div{
     height: 50px;
     background-color: white;
    align-self: center;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+    padding-left: 30px;
   }
   .search-bar{
     flex: 0.45;
     border-right: 2.5px solid var(--light-grey);
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 .filter-location{
     flex: 0.25;
@@ -121,6 +129,8 @@ this is for the night and light mode slider ====== */
 .full-time-only{
     flex: 0.3;
     border-right: 2.5px solid var(--light-grey);
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
 }
 /* main */
 /* this is the jobs section */
@@ -136,3 +146,16 @@ main {
 
 }
 
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  
+}
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+  
+}
