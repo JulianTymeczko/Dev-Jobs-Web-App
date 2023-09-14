@@ -33,7 +33,7 @@ body {
 
 /* this is the nav section  */
 nav{
-    background-image: url(../devjobs-web-app/starter-code/assets/desktop/bg-pattern-header.svg);
+    background-image: url(/assets/desktop/bg-pattern-header.svg);
     background-repeat: no-repeat;
     background-size: cover;
     padding: 50px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);

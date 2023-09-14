@@ -66,8 +66,9 @@ body{
     color: var(--dark-grey);
 }
 .job-card img{
-    background-color: pink;
-    padding: 10px;
+  
+    
+    
     border-radius: 10px;
     transform: translateY(-50%);
 }
