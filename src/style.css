@@ -108,13 +108,70 @@ this is for the night and light mode slider ====== */
   
   }
   #nav-bottom-div div{
-    height: 50px;
+    height: 80px;
     background-color: white;
    align-self: center;
    display: flex;
    flex-direction: row;
    align-items: center;
     padding-left: 30px;
+    gap: 25px;
+   padding-top: 25px;
+   padding-bottom: 25px;
+  }
+  #nav-bottom-div input{
+    border: none;
+
+  }
+ 
+  .custom-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-label {
+    display: inline-block;
+    width: 25px; /* Customize the size as needed */
+    height: 25px; /* Customize the size as needed */
+    background-color: rgb(231, 231, 231);
+   position: relative;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.checkbox-label::before{
+  content: url(assets/desktop/icon-check.svg);
+  left: 50%;
+  z-index: 5;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.custom-checkbox:checked + .checkbox-label::before {
+  display: inline-block;
+}
+
+.full-time-only {
+  gap: 0px !important;
+}
+.full-time-only label, .full-time-only h3, .full-time-only a{
+  margin-right: 20px;
+}
+.custom-checkbox:checked + .checkbox-label {
+    background-color: var(--violet);
+    /* Style for when the checkbox is checked */
+}
+
+  #nav-bottom-div input:hover{
+    cursor: pointer;
+  }
+  #nav-bottom-div input:focus{
+    border: none;
+    outline: none;
   }
   .search-bar{
     flex: 0.45;
