@@ -123,6 +123,9 @@ this is for the night and light mode slider ====== */
     border: none;
 
   }
+ .search-bar input{
+  width: 100%;
+ }
  
   .custom-checkbox {
     opacity: 0;
@@ -227,7 +230,24 @@ footer{
     column-gap: 15px;
    
   }
-
+  #nav-bottom-div div {
+    padding-left: 20px;
+  }
+  .search-bar input{
+    width: max-content;
+  }
+  .full-time-only h3  {
+   
+    width: max-content;
+  }
+  .full-time-only h3 span{
+    display: none;
+  }
+  .full-time-only a{
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  
 }
 
 
