@@ -1,9 +1,9 @@
 import '../src/style.css';
 import '../src/component.css';
 import React, { useState } from 'react';
-import changePlaceholder from './script.js';
+import { changePlaceholder, firstTime } from './script.js';
 export default function Nav() {
-   const[placeholder, setPlaceholder] = useState("Filter by title, companies, expertise...")
+   const[placeholder, setPlaceholder] = useState(firstTime())
     changePlaceholder(setPlaceholder)
     return (
         <>

@@ -1,17 +1,4 @@
-export default function changePlaceholder (setPlaceholder) {
-  window.addEventListener("load", function () {
-    let windowWidth = window.innerWidth;
-  let y;
-
- if (windowWidth <= 1439){
-   y = "Filter by title..."
-   setPlaceholder(y)
-  }
-  else if (windowWidth > 1440){
-   y = "Filter by title, companies, expertise..."
-   setPlaceholder(y)
-  }
-  })
+ function changePlaceholder (setPlaceholder) {
 
 
   window.addEventListener("resize", function () {
@@ -29,3 +16,20 @@ export default function changePlaceholder (setPlaceholder) {
 });
 
 }
+ function firstTime () {
+  let windowWidth = window.innerWidth;
+  let y;
+  
+  if (windowWidth <= 1439){
+   y = "Filter by title..."
+   
+  }
+  else if (windowWidth > 1440){
+   y = "Filter by title, companies, expertise..."
+  
+  }
+  return y;
+}
+
+export {changePlaceholder, firstTime}
+

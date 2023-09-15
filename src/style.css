@@ -119,6 +119,10 @@ this is for the night and light mode slider ====== */
    padding-top: 25px;
    padding-bottom: 25px;
   }
+  .full-time-only h3  {
+   
+    width: max-content;
+  }
   #nav-bottom-div input{
     border: none;
 
@@ -177,17 +181,17 @@ this is for the night and light mode slider ====== */
     outline: none;
   }
   .search-bar{
-    flex: 0.45;
+    flex-basis: 45%;
     border-right: 2.5px solid var(--light-grey);
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
 .filter-location{
-    flex: 0.25;
+    flex-basis: 25%;
     border-right: 2.5px solid var(--light-grey);
 }
 .full-time-only{
-    flex: 0.3;
+    flex-basis: 30%;
     border-right: 2.5px solid var(--light-grey);
     border-bottom-right-radius: 5px;
     border-top-right-radius: 5px;
@@ -232,14 +236,16 @@ footer{
   }
   #nav-bottom-div div {
     padding-left: 20px;
+    flex-basis: 100%;
+    gap: 20px;
   }
-  .search-bar input{
-    width: max-content;
+  .full-time-only label, .full-time-only h3, .full-time-only a{
+    margin-right: 20px;
   }
-  .full-time-only h3  {
-   
-    width: max-content;
+  .filter-location input{
+    width: 80% !important;
   }
+  
   .full-time-only h3 span{
     display: none;
   }
@@ -247,7 +253,7 @@ footer{
     padding-right: 15px;
     padding-left: 15px;
   }
-  
+ 
 }
 
 
