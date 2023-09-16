@@ -4,9 +4,7 @@ function toggleScheme() {
     if (this.dataset.color == "1") {
       this.dataset.color = "2";
       const elementsToAddClassTo = document.querySelectorAll(
-        "body, #nav-bottom-div div, .full-time-only h3, .checkbox-label",
-        ".job-card",
-        ".job-card h1",
+        "body, #nav-bottom-div div, .full-time-only h3, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
       );
 
       elementsToAddClassTo.forEach((element) => {
@@ -15,9 +13,7 @@ function toggleScheme() {
     } else if (this.dataset.color == "2") {
       this.dataset.color = "1";
       const elementsToAddClassTo = document.querySelectorAll(
-        "body, #nav-bottom-div div, .full-time-only h3, .checkbox-label",
-        ".job-card",
-        ".job-card h1",
+        "body, #nav-bottom-div div, .full-time-only h3, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
       );
       elementsToAddClassTo.forEach((element) => {
         element.classList.remove("dark-mode");

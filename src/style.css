@@ -116,6 +116,8 @@ input:checked + .slider:before {
 }
 #nav-bottom-div div.dark-mode {
   background-color: var(--very-dark-blue);
+  border-right-color: #3d3f4b;
+  border-right-width: 1px;
 }
 .full-time-only h3 {
   width: max-content;
@@ -146,7 +148,7 @@ input:checked + .slider:before {
   border-radius: 3px;
 }
 .checkbox-label.dark-mode {
-  background-color: #3d3f4b;
+  background-color: #3d3f4b !important;
 }
 .checkbox-label::before {
   content: url(assets/desktop/icon-check.svg);
@@ -173,7 +175,7 @@ input:checked + .slider:before {
   margin-right: 20px;
 }
 .custom-checkbox:checked + .checkbox-label {
-  background-color: var(--violet);
+  background-color: var(--violet) !important;
   /* Style for when the checkbox is checked */
 }
 
@@ -190,6 +192,9 @@ input:checked + .slider:before {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
 }
+#nav-bottom-div input.dark-mode {
+  background-color: var(--very-dark-blue);
+}
 #mobile-icons {
   display: none !important;
 }
@@ -199,7 +204,7 @@ input:checked + .slider:before {
 }
 .full-time-only {
   flex-basis: 30%;
-  border-right: 2.5px solid var(--light-grey);
+
   border-bottom-right-radius: 5px;
   border-top-right-radius: 5px;
 }

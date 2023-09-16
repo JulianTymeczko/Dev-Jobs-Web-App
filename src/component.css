@@ -73,7 +73,7 @@ body {
   margin-bottom: 20px;
 }
 .job-card h1.dark-mode {
-  color: var(--white);
+  color: var(--light-grey);
 }
 .job-card h1:hover {
   cursor: pointer;
