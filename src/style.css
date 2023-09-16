@@ -39,12 +39,14 @@ nav{
     padding: 50px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);
     border-bottom-left-radius: 100px;
     margin-bottom: 150px;    
+    
 }
 #nav-top-div{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   margin-bottom: 30px;
+ 
 }
 .dark-or-light-mode{
     display: flex;
@@ -105,6 +107,7 @@ this is for the night and light mode slider ====== */
   #nav-bottom-div{
     display: flex;
     flex-direction: row;
+    transform: translateY(50%) !important; 
   
   }
   #nav-bottom-div div{
@@ -186,6 +189,9 @@ this is for the night and light mode slider ====== */
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
+#mobile-icons{
+  display: none !important;
+}
 .filter-location{
     flex-basis: 25%;
     border-right: 2.5px solid var(--light-grey);
@@ -229,6 +235,9 @@ footer{
   :root{
     --left-and-right-body-gutter: 6%;
   }
+  nav{
+    background-image: url(/assets/tablet/bg-pattern-header.svg);
+  }
   main{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 15px;
@@ -265,7 +274,39 @@ footer{
   :root{
     --left-and-right-body-gutter: 6%;
   }
+  nav{
+    background-image: url(/assets/mobile/bg-pattern-header.svg);
+    border-bottom-left-radius: 0px;
+  }
   main{
     grid-template-columns: repeat(1, 1fr);
   }
+  
+  .search-bar{
+   flex-basis: 100% ;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+  padding-right: 30px;
+
+  }
+  .search-bar img{
+    display: none;
+  }
+  #mobile-icons{
+    display: flex !important;
+    flex-direction: row;
+  }
+   #mobile-icons img{
+    display: inline-block !important;
+  }
+  #mobile-icons a {
+    padding: 13px 15px !important;
+  }
+  .filter-location{
+    display: none !important;
+  }
+  .full-time-only{
+    display: none !important;
+  }
+
 }
