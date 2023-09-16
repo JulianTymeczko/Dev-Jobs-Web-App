@@ -1,3 +1,4 @@
+import "../src/job.css";
 import React from "react";
 import "../src/style.css";
 import "../src/component.css";

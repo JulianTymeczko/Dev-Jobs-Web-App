@@ -1,3 +1,4 @@
+import "../src/job.css";
 export default function Job() {
   return (
     <header>

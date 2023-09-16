@@ -6,7 +6,8 @@ function toggleScheme() {
       const elementsToAddClassTo = document.querySelectorAll(
         "body, #nav-bottom-div div, .full-time-only h3, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
       );
-
+      let mobileFilter = document.getElementById("mobile-filter");
+      mobileFilter.src = "/assets/mobile/white-icon-filter.svg";
       elementsToAddClassTo.forEach((element) => {
         element.classList.add("dark-mode");
       });
@@ -15,6 +16,8 @@ function toggleScheme() {
       const elementsToAddClassTo = document.querySelectorAll(
         "body, #nav-bottom-div div, .full-time-only h3, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
       );
+      let mobileFilter = document.getElementById("mobile-filter");
+      mobileFilter.src = "/assets/mobile/icon-filter.svg";
       elementsToAddClassTo.forEach((element) => {
         element.classList.remove("dark-mode");
       });
