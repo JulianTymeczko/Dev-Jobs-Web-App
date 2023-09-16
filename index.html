@@ -1,48 +1,43 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
-
-<head>
+  <head>
     <title>DevJobs Web App</title>
-    <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" alt="">
+    <link rel="icon" type="image/png" href="/assets/favicon-32x32.png" alt="" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./src/component.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/component.css" />
     <link rel="stylesheet" href="./src/style.css" />
-</head>
+  </head>
 
-<body>
+  <body>
     <nav>
-        <div id="nav-top-div"><img src="/assets/desktop/logo.svg" alt="">
-            <div class="dark-or-light-mode"><img src="/assets/desktop/icon-sun.svg"
-                    alt=""><label class="switch">
-                    <input type="checkbox" id="toggleButton">
-                    <span class="slider"></span>
-                </label><img src="/assets/desktop/icon-moon.svg" alt=""></div>
+      <div id="nav-top-div">
+        <img src="/assets/desktop/logo.svg" alt="" />
+        <div class="dark-or-light-mode">
+          <img src="/assets/desktop/icon-sun.svg" alt="" /><label
+            class="switch"
+          >
+            <input type="checkbox" id="toggleButton" data-color="1" />
+            <span class="slider"></span> </label
+          ><img src="/assets/desktop/icon-moon.svg" alt="" />
         </div>
-        <div id="nav-bottom-div">
-           
-        </div>
+      </div>
+      <div id="nav-bottom-div"></div>
     </nav>
-    <main id="root">
-        
-    </main>
-    <footer></footer> 
+    <main id="root"></main>
+    <footer></footer>
 
     <!-- footer is gonna change when a user clicks on the individual job listings and sees the requirements etc. -->
 
-   
-   
-   
     <!-- these are the components -->
-    
-    
-    
-    
-    
+
     <!-- <a href="#" class="padded-anchor">Search</a>
 
 
@@ -57,10 +52,8 @@
         </div>
     </div> -->
 
-
-
     <script type="module" src="/src/main2.jsx"></script>
     <script type="module" src="/src/main.jsx"></script>
-</body>
-
+    <script src="./toggleScheme.js"></script>
+  </body>
 </html>

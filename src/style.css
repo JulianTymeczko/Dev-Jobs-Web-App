@@ -1,155 +1,154 @@
 :root {
-    --h1: 28px;
-    --h1-line-height: 34px;
-    --h2: 24px;
-    --h2-line-height: 29px;
-    --h3: 20px;
-    --h3-line-height: 24px;
-    --h4: 14px;
-    --h4-line-height: 18px;
-    --body: 16px;
-    --body-line-height: 26px;
+  --h1: 28px;
+  --h1-line-height: 34px;
+  --h2: 24px;
+  --h2-line-height: 29px;
+  --h3: 20px;
+  --h3-line-height: 24px;
+  --h4: 14px;
+  --h4-line-height: 18px;
+  --body: 16px;
+  --body-line-height: 26px;
 
+  --violet: #5964e0;
+  --light-violet: rgb(147, 155, 244);
+  --very-dark-blue: rgb(25, 32, 45);
+  --midnight-black: rgb(18, 23, 33);
+  --white: rgb(255, 255, 255);
+  --light-grey: rgb(244, 246, 248);
+  --gray: rgb(157, 174, 194);
+  --dark-grey: rgb(110, 128, 152);
 
-
-    --violet: #5964E0;
-    --light-violet: rgb(147, 155, 244);
-    --very-dark-blue: rgb(25, 32, 45);
-    --midnight-black: rgb(18, 23, 33);
-    --white: rgb(255, 255, 255);
-    --light-grey: rgb(244, 246, 248);
-    --gray: rgb(157, 174, 194);
-    --dark-grey: rgb(110, 128, 152);
-
-
-    --left-and-right-body-gutter: 10%;
+  --left-and-right-body-gutter: 10%;
 }
 
 body {
-    font-family: 'Kumbh Sans', sans-serif;
-    background-color: var(--light-grey);
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: var(--light-grey);
 }
-
+body.dark-mode {
+  background-color: var(--midnight-black);
+}
 
 /* this is the nav section  */
-nav{
-    background-image: url(/assets/desktop/bg-pattern-header.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 50px var(--left-and-right-body-gutter) 0px var(--left-and-right-body-gutter);
-    border-bottom-left-radius: 100px;
-    margin-bottom: 150px;    
-    
+nav {
+  background-image: url(/assets/desktop/bg-pattern-header.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 50px var(--left-and-right-body-gutter) 0px
+    var(--left-and-right-body-gutter);
+  border-bottom-left-radius: 100px;
+  margin-bottom: 150px;
 }
-#nav-top-div{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+#nav-top-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin-bottom: 30px;
- 
 }
-.dark-or-light-mode{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15px;
+.dark-or-light-mode {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
 }
 
 /* 
 this is for the night and light mode slider ====== */
 
 .switch {
-    display: inline-block;
-    position: relative;
-    width: 50px;
-    height: 23px;
-  }
-  
- 
-  .switch input {
-    display: none;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color:var(--white);
-    transition: 0.5s;
-    border-radius: 34px;
-  }
-  
- 
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 4px;
-    bottom: 4px;
-    background-color: var(--violet);
-    transition: 0.4s;
-    border-radius: 50%;
-  }
-  
-  
- 
-  
-  input:checked + .slider:before {
-    transform: translateX(27px);
-  }
+  display: inline-block;
+  position: relative;
+  width: 50px;
+  height: 23px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--white);
+  transition: 0.5s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--violet);
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider:before {
+  transform: translateX(27px);
+}
 
 /* this is the bottom nav section ===================== */
 
-  #nav-bottom-div{
-    display: flex;
-    flex-direction: row;
-    transform: translateY(50%) !important; 
-  
-  }
-  #nav-bottom-div div{
-    height: 80px;
-    background-color: white;
-   align-self: center;
-   display: flex;
-   flex-direction: row;
-   align-items: center;
-    padding-left: 30px;
-    gap: 25px;
-   padding-top: 25px;
-   padding-bottom: 25px;
-  }
-  .full-time-only h3  {
-   
-    width: max-content;
-  }
-  #nav-bottom-div input{
-    border: none;
-
-  }
- .search-bar input{
+#nav-bottom-div {
+  display: flex;
+  flex-direction: row;
+  transform: translateY(50%) !important;
+}
+#nav-bottom-div div {
+  height: 80px;
+  background-color: white;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  gap: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+#nav-bottom-div div.dark-mode {
+  background-color: var(--very-dark-blue);
+}
+.full-time-only h3 {
+  width: max-content;
+}
+.full-time-only h3.dark-mode {
+  color: var(--light-grey);
+}
+#nav-bottom-div input {
+  border: none;
+}
+.search-bar input {
   width: 100%;
- }
- 
-  .custom-checkbox {
-    opacity: 0;
-    width: 0;
-    height: 0;
+}
+
+.custom-checkbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
 .checkbox-label {
-    display: inline-block;
-    width: 25px; /* Customize the size as needed */
-    height: 25px; /* Customize the size as needed */
-    background-color: rgb(231, 231, 231);
-   position: relative;
-    cursor: pointer;
-    border-radius: 3px;
+  display: inline-block;
+  width: 25px; /* Customize the size as needed */
+  height: 25px; /* Customize the size as needed */
+  background-color: rgb(231, 231, 231);
+  position: relative;
+  cursor: pointer;
+  border-radius: 3px;
 }
-.checkbox-label::before{
+.checkbox-label.dark-mode {
+  background-color: #3d3f4b;
+}
+.checkbox-label::before {
   content: url(assets/desktop/icon-check.svg);
   left: 50%;
   z-index: 5;
@@ -168,82 +167,77 @@ this is for the night and light mode slider ====== */
 .full-time-only {
   gap: 0px !important;
 }
-.full-time-only label, .full-time-only h3, .full-time-only a{
+.full-time-only label,
+.full-time-only h3,
+.full-time-only a {
   margin-right: 20px;
 }
 .custom-checkbox:checked + .checkbox-label {
-    background-color: var(--violet);
-    /* Style for when the checkbox is checked */
+  background-color: var(--violet);
+  /* Style for when the checkbox is checked */
 }
 
-  #nav-bottom-div input:hover{
-    cursor: pointer;
-  }
-  #nav-bottom-div input:focus{
-    border: none;
-    outline: none;
-  }
-  .search-bar{
-    flex-basis: 45%;
-    border-right: 2.5px solid var(--light-grey);
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+#nav-bottom-div input:hover {
+  cursor: pointer;
 }
-#mobile-icons{
+#nav-bottom-div input:focus {
+  border: none;
+  outline: none;
+}
+.search-bar {
+  flex-basis: 45%;
+  border-right: 2.5px solid var(--light-grey);
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+#mobile-icons {
   display: none !important;
 }
-.filter-location{
-    flex-basis: 25%;
-    border-right: 2.5px solid var(--light-grey);
+.filter-location {
+  flex-basis: 25%;
+  border-right: 2.5px solid var(--light-grey);
 }
-.full-time-only{
-    flex-basis: 30%;
-    border-right: 2.5px solid var(--light-grey);
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+.full-time-only {
+  flex-basis: 30%;
+  border-right: 2.5px solid var(--light-grey);
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
 }
 /* main */
 /* this is the jobs section */
 
-
 main {
   position: relative;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 40px;
-    row-gap: 100px;
-    margin: 0px var(--left-and-right-body-gutter) 100px var(--left-and-right-body-gutter);
-
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+  row-gap: 100px;
+  margin: 0px var(--left-and-right-body-gutter) 100px
+    var(--left-and-right-body-gutter);
 }
 
-#load-more{
+#load-more {
   position: absolute;
- left: calc(50% - 70px);
- bottom: -150px;
- 
+  left: calc(50% - 70px);
+  bottom: -150px;
 }
 
-
-footer{
+footer {
   height: 150px;
 }
 
-
-
-
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-  :root{
+  :root {
     --left-and-right-body-gutter: 6%;
   }
-  nav{
+  nav {
     background-image: url(/assets/tablet/bg-pattern-header.svg);
   }
-  main{
+  main {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 15px;
-   
   }
-  .job-card{
+  .job-card {
     max-width: 450px;
   }
   #nav-bottom-div div {
@@ -251,71 +245,67 @@ footer{
     flex-basis: 100%;
     gap: 20px;
   }
-  .full-time-only label, .full-time-only h3, .full-time-only a{
+  .full-time-only label,
+  .full-time-only h3,
+  .full-time-only a {
     margin-right: 20px;
   }
-  .filter-location input{
+  .filter-location input {
     width: 80% !important;
   }
-  
-  .full-time-only h3 span{
+  .full-time-only {
+    justify-content: center;
+  }
+  .full-time-only h3 span {
     display: none;
   }
-  .full-time-only a{
+  .full-time-only a {
     padding-right: 15px;
     padding-left: 15px;
   }
- 
 }
 
-
-
-
-
-
 @media screen and (max-width: 767px) {
-  :root{
+  :root {
     --left-and-right-body-gutter: 6%;
   }
-  nav{
+  nav {
     background-image: url(/assets/mobile/bg-pattern-header.svg);
     border-bottom-left-radius: 0px;
   }
-  #nav-top-div{
+  #nav-top-div {
     margin-bottom: 0px;
   }
-  main{
+  main {
     grid-template-columns: repeat(1, 1fr);
   }
-  
-  .search-bar{
-   flex-basis: 100% ;
-   border-top-right-radius: 5px;
-   border-bottom-right-radius: 5px;
-  padding-right: 30px;
 
+  .search-bar {
+    flex-basis: 100%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-right: 30px;
   }
-  .search-bar img{
+  .search-bar img {
     display: none;
   }
-  #mobile-icons{
+  #mobile-icons {
     display: flex !important;
     flex-direction: row;
   }
-   #mobile-icons img{
+  #mobile-icons img {
     display: inline-block !important;
   }
-  #mobile-filter:hover{
+  #mobile-filter:hover {
     cursor: pointer;
   }
   #mobile-icons a {
     padding: 13px 15px !important;
   }
-  .filter-location{
+  .filter-location {
     display: none !important;
   }
-  .full-time-only{
+  .full-time-only {
     display: none !important;
   }
-
 }
