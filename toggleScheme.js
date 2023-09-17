@@ -4,7 +4,7 @@ function toggleScheme() {
     if (this.dataset.color == "1") {
       this.dataset.color = "2";
       const elementsToAddClassTo = document.querySelectorAll(
-        "body, #nav-bottom-div div, .full-time-only h3, #mobile-pop-up-bottom div h3, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
+        "body, #nav-bottom-div div, .full-time-only h3, #mobile-pop-up-bottom div h3, dialog, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
       );
       let mobileFilter = document.getElementById("mobile-filter");
       mobileFilter.src = "/assets/mobile/white-icon-filter.svg";
@@ -14,7 +14,7 @@ function toggleScheme() {
     } else if (this.dataset.color == "2") {
       this.dataset.color = "1";
       const elementsToAddClassTo = document.querySelectorAll(
-        "body, #nav-bottom-div div, .full-time-only h3, #mobile-pop-up-bottom div h3, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
+        "body, #nav-bottom-div div, .full-time-only h3, #mobile-pop-up-bottom div h3, dialog, .checkbox-label, .job-card, .job-card h1, #nav-bottom-div input",
       );
       let mobileFilter = document.getElementById("mobile-filter");
       mobileFilter.src = "/assets/mobile/icon-filter.svg";
