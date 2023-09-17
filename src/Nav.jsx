@@ -1,22 +1,42 @@
 import "../src/job.css";
 import "../src/style.css";
 import "../src/component.css";
-import React, { useState, useEffect } from "react";
+import mobilePop from "./mobilePop.js";
+import React, { useState } from "react";
 import { changePlaceholder, firstTime } from "./script.js";
 export default function Nav() {
-  const [display, setDisplay] = useState("none");
   const [placeholder, setPlaceholder] = useState(firstTime());
-  useEffect(() => {
-    if (display == "inline-block") {
-      document.querySelector("html").setAttribute("style", "opacity: 0.4965;");
-    } else if (display == "none") {
-      document.querySelector("html").setAttribute("style", "opacity: 1");
-    }
-  }, [display]);
   changePlaceholder(setPlaceholder);
   return (
     <>
-      <div style={{ display: display }}>dvfsdvds</div>
+      <dialog id="mobile-pop-up">
+        <div>
+          <img src="/assets/desktop/icon-location.svg" alt="" />
+          <input
+            type="text"
+            name=""
+            id=""
+            placeholder="Filter by location..."
+          />
+        </div>
+        <hr />
+        <div id="mobile-pop-up-bottom">
+          <div>
+            <input
+              type="checkbox"
+              id="myCheckbox"
+              className="custom-checkbox"
+            />
+            <label htmlFor="myCheckbox" className="checkbox-label"></label>
+            <h3>
+              Full Time <span>Only</span>
+            </h3>
+          </div>
+          <a href="#" className="padded-anchor">
+            Search
+          </a>
+        </div>
+      </dialog>
       <>
         <div className="search-bar">
           <img src="/assets/desktop/icon-search.svg" alt="" />
@@ -27,11 +47,7 @@ export default function Nav() {
               alt=""
               id="mobile-filter"
               onClick={() => {
-                if (display == "none") {
-                  setDisplay("inline-block");
-                } else if (display == "inline-block") {
-                  setDisplay("none");
-                }
+                mobilePop();
               }}
             />
             <a href="#" className="padded-anchor">
