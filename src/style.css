@@ -156,7 +156,7 @@ input:checked + .slider:before {
 }
 .checkbox-label::before {
   content: url(assets/desktop/icon-check.svg);
-  left: 50%;
+
   z-index: 5;
   background-repeat: no-repeat;
   background-size: cover;

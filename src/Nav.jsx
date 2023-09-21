@@ -24,10 +24,10 @@ export default function Nav() {
           <div>
             <input
               type="checkbox"
-              id="myCheckbox"
+              id="myCheckbox2"
               className="custom-checkbox"
             />
-            <label htmlFor="myCheckbox" className="checkbox-label"></label>
+            <label htmlFor="myCheckbox2" className="checkbox-label"></label>
             <h3>
               Full Time <span>Only</span>
             </h3>
