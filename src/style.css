@@ -40,6 +40,9 @@ nav {
   border-bottom-left-radius: 100px;
   margin-bottom: 150px;
 }
+#devjobs:hover {
+  cursor: pointer;
+}
 #nav-top-div {
   display: flex;
   flex-direction: row;
