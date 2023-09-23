@@ -1,4 +1,3 @@
-import "../src/job.css";
 import React, { useState } from "react";
 import "../src/style.css";
 import "../src/component.css";
@@ -58,7 +57,7 @@ export default function App() {
               </div>
             </div>
           </header>
-          <main>
+          <section>
             <h2>
               {selectedJob.postedAt} <span> . </span>
               {selectedJob.contract}
@@ -90,7 +89,7 @@ export default function App() {
                 ))}
               </ul>
             </div>
-          </main>
+          </section>
         </>
       )}
     </>

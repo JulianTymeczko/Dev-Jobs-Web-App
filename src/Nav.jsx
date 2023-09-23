@@ -1,4 +1,3 @@
-import "../src/job.css";
 import "../src/style.css";
 import "../src/component.css";
 import mobilePop from "./mobilePop.js";
