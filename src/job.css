@@ -32,11 +32,19 @@
   flex-direction: row;
   margin: 0px var(--div-gutter-right-left) 60px var(--div-gutter-right-left);
   max-height: 140px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.job-header.dark-mode {
+  background-color: var(--very-dark-blue);
 }
 .job-header h1 {
   color: var(--midnight-black);
   font-size: var(--h2);
   margin-bottom: 20px;
+}
+.job-header h1.dark-mode {
+  color: var(--white);
 }
 .job-header h2 {
   font-size: var(--body);
@@ -48,6 +56,14 @@
   background-color: rgba(137, 160, 224, 0.1);
   font-weight: 600;
   letter-spacing: 0.4px;
+}
+.job-header a.dark-mode {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+.job-header a.dark-mode:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  filter: brightness(125%);
 }
 .job-header a:hover {
   cursor: pointer;
@@ -69,9 +85,19 @@
 .job-section {
   margin: 0px var(--div-gutter-right-left) 0px var(--div-gutter-right-left);
   padding: 50px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+}
+.job-section.dark-mode {
+  background-color: var(--very-dark-blue);
 }
 .job-section h1 {
   font-size: var(--h1) !important;
+}
+.job-section h1.dark-mode {
+  color: var(--white);
 }
 .job-section span {
   color: var(--violet);
@@ -129,6 +155,9 @@
   font-size: var(--h3);
   margin-bottom: calc(var(--margin-bottom) - 15px);
 }
+#requirements-div h2.dark-mode {
+  color: var(--white);
+}
 #second-para {
   margin-bottom: calc(var(--margin-bottom) - 15px);
 }
@@ -141,6 +170,9 @@
   color: var(--midnight-black);
   font-size: var(--h3);
   margin-bottom: calc(var(--margin-bottom) - 15px);
+}
+#what-you-div h2.dark-mode {
+  color: var(--white);
 }
 #third-para {
   margin-bottom: calc(var(--margin-bottom) - 15px);

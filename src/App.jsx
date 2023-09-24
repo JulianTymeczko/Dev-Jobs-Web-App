@@ -6,14 +6,19 @@ import hideNav from "./hideNav.js";
 import data from "./data.json";
 import { useEffect } from "react";
 import RootFooter from "./main3.jsx";
+import RootNav from "./main2.jsx";
 export default function App() {
   const [screen, setScreen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
+  const [filter, setFilter] = useState(null);
   useEffect(() => {
     if (selectedJob) {
       RootFooter(selectedJob);
     }
   }, [selectedJob]);
+  useEffect(() => {
+    RootNav(setFilter);
+  }, []);
   return (
     <>
       {!screen ? (
