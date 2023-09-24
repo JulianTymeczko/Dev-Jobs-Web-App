@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../src/style.css";
 import "../src/component.css";
+import "../src/job.css";
 import hideNav from "./hideNav.js";
 import data from "./data.json";
 
@@ -41,55 +42,71 @@ export default function App() {
         })
       ) : (
         <>
-          <header>
-            <div style={{ backgroundColor: selectedJob.logoBackground }}>
-              {selectedJob.logo}
-            </div>
-            <div>
+          <div style={{ position: "absolute", top: "-200px" }}>
+            <header className="job-header">
+              <img
+                src={selectedJob.logo}
+                alt=""
+                style={{ backgroundColor: selectedJob.logoBackground }}
+              />
+
               <div>
-                <h1>{selectedJob.company}</h1>
-                <h2>{`${selectedJob.company}.com`}</h2>
+                <div>
+                  <h1>{selectedJob.company}</h1>
+                  <h2>{`${selectedJob.company}.com`}</h2>
+                </div>
+                <div>
+                  <a href={selectedJob.Website} className="padded-anchor">
+                    Company Site
+                  </a>
+                </div>
               </div>
+            </header>
+            <section className="job-section">
+              <h2>
+                {selectedJob.postedAt} <span> . </span>
+                {selectedJob.contract}
+              </h2>
               <div>
-                <a href={selectedJob.Website} className="padded-anchor">
-                  Company Site
+                <h1>{selectedJob.position}</h1>
+                <a href={selectedJob.apply} className="padded-anchor">
+                  Apply Now
                 </a>
               </div>
-            </div>
-          </header>
-          <section>
-            <h2>
-              {selectedJob.postedAt} <span> . </span>
-              {selectedJob.contract}
-            </h2>
-            <div>
-              <h1>{selectedJob.position}</h1>
-              <a href={selectedJob.apply} className="padded-anchor">
-                Apply Now
-              </a>
-            </div>
-            <h3>{selectedJob.location}</h3>
-            <p>{selectedJob.description}</p>
+              <h3>{selectedJob.location}</h3>
+              <p>{selectedJob.description}</p>
 
-            <div>
-              <h2>Requirements</h2>
-              <p>{selectedJob.requirements.content}</p>
-              <ul>
-                {selectedJob.requirements.items.map((item, index) => (
-                  <li key={index}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h2>What You Will Do</h2>
-              <p>{selectedJob.role.content}</p>
-              <ul>
-                {selectedJob.role.items.map((itemRole, index) => (
-                  <li key={index}>{itemRole}</li>
-                ))}
-              </ul>
-            </div>
-          </section>
+              <div>
+                <h2>Requirements</h2>
+                <p>{selectedJob.requirements.content}</p>
+                <ul>
+                  {selectedJob.requirements.items.map((item, index) => (
+                    <li key={index}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <h2>What You Will Do</h2>
+                <p>{selectedJob.role.content}</p>
+                <ul>
+                  {selectedJob.role.items.map((itemRole, index) => (
+                    <li key={index}>{itemRole}</li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+            <footer>
+              <div>
+                <h1>{selectedJob.position}</h1>
+                <h2>{selectedJob.company}</h2>
+              </div>
+              <div>
+                <a href={selectedJob.apply} className="padded-anchor">
+                  Apply Now
+                </a>
+              </div>
+            </footer>
+          </div>
         </>
       )}
     </>

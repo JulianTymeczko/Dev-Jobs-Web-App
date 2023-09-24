@@ -235,9 +235,6 @@ main {
   bottom: -150px;
 }
 
-footer {
-  height: 150px;
-}
 dialog {
   height: max-content !important;
   margin: auto;

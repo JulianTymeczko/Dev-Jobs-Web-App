@@ -1,0 +1,83 @@
+:root {
+  --h1: 28px;
+  --h1-line-height: 34px;
+  --h2: 24px;
+  --h2-line-height: 29px;
+  --h3: 20px;
+  --h3-line-height: 24px;
+  --h4: 14px;
+  --h4-line-height: 18px;
+  --body: 16px;
+  --body-line-height: 26px;
+
+  --violet: #5964e0;
+  --light-violet: rgb(147, 155, 244);
+  --very-dark-blue: rgb(25, 32, 45);
+  --midnight-black: rgb(18, 23, 33);
+  --white: rgb(255, 255, 255);
+  --light-grey: rgb(244, 246, 248);
+  --gray: rgb(157, 174, 194);
+  --dark-grey: rgb(110, 128, 152);
+  --div-gutter-right-left: 16%;
+}
+.job-header,
+.job-section,
+footer {
+  background-color: var(--white);
+}
+
+/* header section ============================================= */
+
+.job-header {
+  display: flex;
+  flex-direction: row;
+  margin: 0px var(--div-gutter-right-left) 60px var(--div-gutter-right-left);
+}
+
+.job-header > div:first-child {
+  flex-basis: 30%;
+}
+.job-header > div:nth-child(2) {
+  flex-basis: 70%;
+}
+
+/* this is the section part or the main part ==================================== */
+.job-section {
+  margin: 0px var(--div-gutter-right-left) 0px var(--div-gutter-right-left);
+}
+.job-section p,
+.job-section li {
+  color: var(--gray);
+  font-weight: 300;
+  font-size: var(--body);
+  line-height: var(--body-line-height);
+}
+.job-section > h2 {
+  color: var(--dark-grey);
+  font-size: var(--body);
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+.job-section > div:nth-child(2) {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.job-section h1 {
+  font-size: var(--h3);
+  color: var(--midnight-black);
+  margin-bottom: 20px;
+}
+.job-section h3 {
+  font-size: var(--h4);
+  color: var(--violet);
+}
+
+/* 
+this is the footer section ======================= */
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding: 0px var(--div-gutter-right-left) 0px var(--div-gutter-right-left);
+}
