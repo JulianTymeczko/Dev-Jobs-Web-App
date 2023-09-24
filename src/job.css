@@ -9,7 +9,7 @@
   --h4-line-height: 18px;
   --body: 16px;
   --body-line-height: 26px;
-
+  --margin-bottom: 60px;
   --violet: #5964e0;
   --light-violet: rgb(147, 155, 244);
   --very-dark-blue: rgb(25, 32, 45);
@@ -21,8 +21,7 @@
   --div-gutter-right-left: 16%;
 }
 .job-header,
-.job-section,
-footer {
+.job-section {
   background-color: var(--white);
 }
 
@@ -32,18 +31,44 @@ footer {
   display: flex;
   flex-direction: row;
   margin: 0px var(--div-gutter-right-left) 60px var(--div-gutter-right-left);
+  max-height: 140px;
 }
-
-.job-header > div:first-child {
-  flex-basis: 30%;
+.job-header a {
+  color: var(--violet);
+  background-color: rgba(137, 160, 224, 0.1);
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
-.job-header > div:nth-child(2) {
-  flex-basis: 70%;
+.job-header a:hover {
+  cursor: pointer;
+  background-color: rgba(137, 160, 224, 0.8);
+}
+.job-header > img {
+  flex-basis: 20%;
+}
+.job-header > div {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
 }
 
 /* this is the section part or the main part ==================================== */
 .job-section {
   margin: 0px var(--div-gutter-right-left) 0px var(--div-gutter-right-left);
+  padding: 50px;
+}
+.job-section span {
+  margin-right: 25px;
+  color: var(--violet);
+}
+#requirements-div span {
+  font-size: 23px;
+}
+#what-you-div span {
+  font-size: var(--body);
 }
 .job-section p,
 .job-section li {
@@ -71,13 +96,32 @@ footer {
 .job-section h3 {
   font-size: var(--h4);
   color: var(--violet);
+  margin-bottom: var(--margin-bottom);
+}
+#first-para {
+  margin-bottom: var(--margin-bottom);
+}
+#requirements-div {
+  margin-bottom: var(--margin-bottom);
+}
+#requirements-div h2 {
+  color: var(--midnight-black);
+  font-size: var(--h3);
+  margin-bottom: calc(var(--margin-bottom) - 15px);
+}
+#second-para {
+  margin-bottom: calc(var(--margin-bottom) - 15px);
+}
+#requirements-div li:not(:last-child),
+#what-you-div li:not(:last-child) {
+  margin-bottom: 15px;
 }
 
-/* 
-this is the footer section ======================= */
-
-footer {
-  position: absolute;
-  bottom: 0px;
-  padding: 0px var(--div-gutter-right-left) 0px var(--div-gutter-right-left);
+#what-you-div h2 {
+  color: var(--midnight-black);
+  font-size: var(--h3);
+  margin-bottom: calc(var(--margin-bottom) - 15px);
+}
+#third-para {
+  margin-bottom: calc(var(--margin-bottom) - 15px);
 }

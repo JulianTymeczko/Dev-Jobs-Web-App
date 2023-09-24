@@ -42,7 +42,7 @@ export default function App() {
         })
       ) : (
         <>
-          <div style={{ position: "absolute", top: "-200px" }}>
+          <div>
             <header className="job-header">
               <img
                 src={selectedJob.logo}
@@ -55,11 +55,10 @@ export default function App() {
                   <h1>{selectedJob.company}</h1>
                   <h2>{`${selectedJob.company}.com`}</h2>
                 </div>
-                <div>
-                  <a href={selectedJob.Website} className="padded-anchor">
-                    Company Site
-                  </a>
-                </div>
+
+                <a href={selectedJob.Website} className="padded-anchor">
+                  Company Site
+                </a>
               </div>
             </header>
             <section className="job-section">
@@ -74,38 +73,33 @@ export default function App() {
                 </a>
               </div>
               <h3>{selectedJob.location}</h3>
-              <p>{selectedJob.description}</p>
+              <p id="first-para">{selectedJob.description}</p>
 
-              <div>
+              <div id="requirements-div">
                 <h2>Requirements</h2>
-                <p>{selectedJob.requirements.content}</p>
+                <p id="second-para">{selectedJob.requirements.content}</p>
                 <ul>
                   {selectedJob.requirements.items.map((item, index) => (
-                    <li key={index}>{item}</li>
+                    <li key={index}>
+                      <span>•</span>
+                      {item}
+                    </li>
                   ))}
                 </ul>
               </div>
-              <div>
+              <div id="what-you-div">
                 <h2>What You Will Do</h2>
-                <p>{selectedJob.role.content}</p>
+                <p id="third-para">{selectedJob.role.content}</p>
                 <ul>
                   {selectedJob.role.items.map((itemRole, index) => (
-                    <li key={index}>{itemRole}</li>
+                    <li key={index}>
+                      <span>{parseInt(index) + 1}</span>
+                      {itemRole}
+                    </li>
                   ))}
                 </ul>
               </div>
             </section>
-            <footer>
-              <div>
-                <h1>{selectedJob.position}</h1>
-                <h2>{selectedJob.company}</h2>
-              </div>
-              <div>
-                <a href={selectedJob.apply} className="padded-anchor">
-                  Apply Now
-                </a>
-              </div>
-            </footer>
           </div>
         </>
       )}

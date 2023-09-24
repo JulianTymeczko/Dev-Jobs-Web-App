@@ -9,7 +9,7 @@
   --h4-line-height: 18px;
   --body: 16px;
   --body-line-height: 26px;
-
+  --div-gutter-right-left: 16%;
   --violet: #5964e0;
   --light-violet: rgb(147, 155, 244);
   --very-dark-blue: rgb(25, 32, 45);
@@ -225,7 +225,7 @@ main {
   grid-template-columns: repeat(3, 1fr);
   column-gap: 40px;
   row-gap: 100px;
-  margin: 0px var(--left-and-right-body-gutter) 100px
+  margin: 0px var(--left-and-right-body-gutter) 150px
     var(--left-and-right-body-gutter);
 }
 
@@ -280,6 +280,30 @@ dialog.dark-mode {
 }
 dialog::backdrop {
   background-color: rgb(18, 23, 33, 0.65);
+}
+
+footer {
+  background-color: var(--white);
+
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  display: none;
+
+  padding: 20px var(--div-gutter-right-left);
+}
+footer h2 {
+  color: var(--midnight-black);
+  font-size: var(--h2);
+  margin-bottom: 20px;
+}
+footer h3 {
+  color: var(--gray);
+  font-size: var(--body);
+}
+#space {
+  height: 150px;
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   :root {

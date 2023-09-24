@@ -1,11 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.jsx";
 
-
-ReactDOM.createRoot(document.getElementById('root')).render(
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App/>
-    <a href="#" className="padded-anchor" id="load-more">Load More</a>
+    <App />
+    <a href="#" className="padded-anchor" id="load-more">
+      Load More
+    </a>
   </React.StrictMode>,
-)
+);
