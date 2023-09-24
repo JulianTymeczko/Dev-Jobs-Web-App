@@ -82,7 +82,7 @@ export default function App() {
                   {selectedJob.requirements.items.map((item, index) => (
                     <li key={index}>
                       <span>•</span>
-                      {item}
+                      <p> {item}</p>
                     </li>
                   ))}
                 </ul>
@@ -94,7 +94,7 @@ export default function App() {
                   {selectedJob.role.items.map((itemRole, index) => (
                     <li key={index}>
                       <span>{parseInt(index) + 1}</span>
-                      {itemRole}
+                      <p> {itemRole}</p>
                     </li>
                   ))}
                 </ul>

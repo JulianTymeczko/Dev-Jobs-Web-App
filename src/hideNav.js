@@ -5,5 +5,10 @@ export default function hideNav() {
   loadMore.setAttribute("style", "display: none;");
   document.querySelector("footer").setAttribute("style", "display: flex;");
   document.getElementById("space").setAttribute("style", "display: none;");
-  document.querySelector("main").setAttribute("style", "display: inline-block");
+  document
+    .querySelector("main")
+    .setAttribute(
+      "style",
+      "display: inline-block; transform: translateY(-200px); margin-bottom: -150px;",
+    );
 }

@@ -33,6 +33,16 @@
   margin: 0px var(--div-gutter-right-left) 60px var(--div-gutter-right-left);
   max-height: 140px;
 }
+.job-header h1 {
+  color: var(--midnight-black);
+  font-size: var(--h2);
+  margin-bottom: 20px;
+}
+.job-header h2 {
+  font-size: var(--body);
+  color: var(--gray);
+  font-weight: 300;
+}
 .job-header a {
   color: var(--violet);
   background-color: rgba(137, 160, 224, 0.1);
@@ -60,12 +70,21 @@
   margin: 0px var(--div-gutter-right-left) 0px var(--div-gutter-right-left);
   padding: 50px;
 }
+.job-section h1 {
+  font-size: var(--h1) !important;
+}
 .job-section span {
-  margin-right: 25px;
   color: var(--violet);
+  font-weight: 600 !important;
 }
 #requirements-div span {
-  font-size: 23px;
+  font-size: 20px;
+}
+.job-section li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 25px;
 }
 #what-you-div span {
   font-size: var(--body);
@@ -87,11 +106,12 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .job-section h1 {
   font-size: var(--h3);
   color: var(--midnight-black);
-  margin-bottom: 20px;
 }
 .job-section h3 {
   font-size: var(--h4);
