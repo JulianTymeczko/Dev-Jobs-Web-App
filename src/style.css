@@ -351,6 +351,9 @@ footer h3 {
     padding-right: 15px;
     padding-left: 15px;
   }
+  footer {
+    padding: 25px calc(var(--left-and-right-body-gutter));
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -396,5 +399,16 @@ footer h3 {
   }
   .full-time-only {
     display: none !important;
+  }
+  footer > div:first-child {
+    display: none;
+  }
+
+  footer a {
+    width: 100%;
+    text-align: center;
+  }
+  footer {
+    padding: 25px calc(var(--left-and-right-body-gutter));
   }
 }

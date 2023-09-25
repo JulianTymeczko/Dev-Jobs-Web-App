@@ -78,11 +78,22 @@ export default function App() {
               </h2>
               <div>
                 <h1>{selectedJob.position}</h1>
-                <a href={selectedJob.apply} className="padded-anchor">
+                <a
+                  href={selectedJob.apply}
+                  className="padded-anchor"
+                  id="dissapear-mobile"
+                >
                   Apply Now
                 </a>
               </div>
               <h3>{selectedJob.location}</h3>
+              <a
+                href={selectedJob.apply}
+                className="padded-anchor"
+                id="appear-mobile"
+              >
+                Apply Now
+              </a>
               <p id="first-para">{selectedJob.description}</p>
 
               <div id="requirements-div">
