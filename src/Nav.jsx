@@ -18,7 +18,7 @@ export default function Nav({
     <>
       <dialog id="mobile-pop-up">
         <div>
-          <img src="/assets/desktop/icon-location.svg" alt="" />
+          <img src="./assets/desktop/icon-location.svg" alt="" />
           <input
             type="text"
             name=""
@@ -69,7 +69,7 @@ export default function Nav({
       </dialog>
       <>
         <div className="search-bar">
-          <img src="/assets/desktop/icon-search.svg" alt="" />
+          <img src="./assets/desktop/icon-search.svg" alt="" />
           <input
             type="text"
             id="search-bar-input"
@@ -80,20 +80,30 @@ export default function Nav({
           />
           <div id="mobile-icons">
             <img
-              src="/assets/mobile/icon-filter.svg"
+              src="./assets/mobile/icon-filter.svg"
               alt=""
               id="mobile-filter"
               onClick={() => {
                 mobilePop();
               }}
             />
-            <a href="#" className="padded-anchor">
-              <img src="/assets/desktop/white-icon-search.svg" alt="" />
+            <a
+              href="#"
+              className="padded-anchor"
+              onClick={() => {
+                if (mobilePurple) {
+                  setMobileFullTime(true);
+                } else if (!mobilePurple) {
+                  setMobileFullTime(false);
+                }
+              }}
+            >
+              <img src="./assets/desktop/white-icon-search.svg" alt="" />
             </a>
           </div>
         </div>
         <div className="filter-location">
-          <img src="/assets/desktop/icon-location.svg" alt="" />
+          <img src="./assets/desktop/icon-location.svg" alt="" />
           <input
             type="text"
             placeholder="Filter by location..."

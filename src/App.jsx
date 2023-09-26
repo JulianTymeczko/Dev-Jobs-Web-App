@@ -7,6 +7,7 @@ import data from "./data.json";
 import { useEffect } from "react";
 import RootFooter from "./main3.jsx";
 import RootNav from "./main2.jsx";
+import firstTimeDarkModeReact from "./toggleScheme.js";
 export default function App() {
   const [screen, setScreen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
@@ -18,6 +19,9 @@ export default function App() {
   useEffect(() => {
     if (selectedJob) {
       RootFooter(selectedJob);
+      if (document.getElementById("toggleButton").dataset.color == "2") {
+        firstTimeDarkModeReact();
+      }
     }
   }, [selectedJob]);
   useEffect(() => {
@@ -29,7 +33,11 @@ export default function App() {
       setMobileFullTime,
     );
   }, []);
-
+  useEffect(() => {
+    if (document.getElementById("toggleButton").dataset.color == "2") {
+      firstTimeDarkModeReact();
+    }
+  }, [jobTitle, location, fullTime, mobileFullTime, mobileLocation]);
   return (
     <>
       {!screen ? (
@@ -113,7 +121,7 @@ export default function App() {
                   <h2>{`${selectedJob.company}.com`}</h2>
                 </div>
 
-                <a href={selectedJob.Website} className="padded-anchor">
+                <a href={selectedJob.website} className="padded-anchor">
                   Company Site
                 </a>
               </div>

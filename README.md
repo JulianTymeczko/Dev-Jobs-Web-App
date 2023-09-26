@@ -1,8 +1,17 @@
-# React + Vite
+## Dev-Jobs-Web-App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+Created from scratch, this application turned Figma files into a pixel-perfect web application. Dev Jobs Web App is a fully responsive site
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+across all screen sizes such as mobile, tablet and desktop. This application was built using HTML, CSS, JavaScript, React, ViteJS, and ESLint.
+
+It allows users to search and filter through potential job opportunities, while also allowing users to click on an individual job and see the
+
+full description of that job including its website and other details like its requirements. This project also features 2 color schemes
+
+that a user can switch between.
+
+## Link to Deployed Application
+
+https://juliantymeczko.github.io/Dev-Jobs-Web-App/
