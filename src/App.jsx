@@ -10,46 +10,72 @@ import RootNav from "./main2.jsx";
 export default function App() {
   const [screen, setScreen] = useState(false);
   const [selectedJob, setSelectedJob] = useState(null);
-  const [filter, setFilter] = useState(null);
+  const [jobTitle, setJobTitle] = useState("");
+  const [location, setLocation] = useState("");
+  const [fullTime, setFullTime] = useState(false);
   useEffect(() => {
     if (selectedJob) {
       RootFooter(selectedJob);
     }
   }, [selectedJob]);
   useEffect(() => {
-    RootNav(setFilter);
+    RootNav(setJobTitle, setLocation, setFullTime);
   }, []);
+
   return (
     <>
       {!screen ? (
-        data.map((el) => {
-          return (
-            <div className="job-card" key={el.id}>
-              <img
-                src={el.logo}
-                alt=""
-                style={{ backgroundColor: el.logoBackground }}
-              />
-              <div>
-                <h2>
-                  {el.postedAt} <span> . </span>
-                  {el.contract}
-                </h2>
-                <h1
-                  onClick={() => {
-                    setScreen(true);
-                    setSelectedJob(el);
-                    hideNav();
-                  }}
-                >
-                  {el.position}
-                </h1>
-                <h2>{el.company}</h2>
-                <h3>{el.location}</h3>
+        data
+          .filter((el) => {
+            if (jobTitle == "") {
+              return true;
+            } else if (jobTitle != "") {
+              return (
+                el.position.includes(jobTitle) || el.company.includes(jobTitle)
+              );
+            }
+          })
+          .filter((el) => {
+            if (location == "") {
+              return true;
+            } else if (location != "") {
+              return el.location.includes(location);
+            }
+          })
+          .filter((el) => {
+            if (fullTime) {
+              return el.contract == "Full Time";
+            }
+            return true;
+          })
+          .map((el) => {
+            return (
+              <div className="job-card" key={el.id}>
+                <img
+                  src={el.logo}
+                  alt=""
+                  style={{ backgroundColor: el.logoBackground }}
+                />
+                <div>
+                  <h2>
+                    {el.postedAt} <span> . </span>
+                    {el.contract}
+                  </h2>
+                  <h1
+                    onClick={() => {
+                      setScreen(true);
+                      setSelectedJob(el);
+                      hideNav();
+                    }}
+                  >
+                    {el.position}
+                  </h1>
+                  <h2>{el.company}</h2>
+                  <h3>{el.location}</h3>
+                </div>
               </div>
-            </div>
-          );
-        })
+            );
+          })
       ) : (
         <>
           <div>
