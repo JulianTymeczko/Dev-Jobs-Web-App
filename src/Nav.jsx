@@ -3,9 +3,16 @@ import "../src/component.css";
 import mobilePop from "./mobilePop.js";
 import React, { useState } from "react";
 import { changePlaceholder, firstTime } from "./script.js";
-export default function Nav({ setJobTitle, setLocation, setFullTime }) {
+export default function Nav({
+  setJobTitle,
+  setLocation,
+  setFullTime,
+  setMobileLocation,
+  setMobileFullTime,
+}) {
   const [placeholder, setPlaceholder] = useState(firstTime());
   const [purple, setPurple] = useState(false);
+  const [mobilePurple, setMobilePurple] = useState(false);
   changePlaceholder(setPlaceholder);
   return (
     <>
@@ -17,6 +24,9 @@ export default function Nav({ setJobTitle, setLocation, setFullTime }) {
             name=""
             id=""
             placeholder="Filter by location..."
+            onChange={(e) => {
+              setMobileLocation(e.target.value);
+            }}
           />
         </div>
         <hr />
@@ -27,12 +37,32 @@ export default function Nav({ setJobTitle, setLocation, setFullTime }) {
               id="myCheckbox2"
               className="custom-checkbox"
             />
-            <label htmlFor="myCheckbox2" className="checkbox-label"></label>
+            <label
+              htmlFor="myCheckbox2"
+              className="checkbox-label"
+              onClick={() => {
+                if (!mobilePurple) {
+                  setMobilePurple(true);
+                } else if (mobilePurple) {
+                  setMobilePurple(false);
+                }
+              }}
+            ></label>
             <h3>
               Full Time <span>Only</span>
             </h3>
           </div>
-          <a href="#" className="padded-anchor">
+          <a
+            href="#"
+            className="padded-anchor"
+            onClick={() => {
+              if (mobilePurple) {
+                setMobileFullTime(true);
+              } else if (!mobilePurple) {
+                setMobileFullTime(false);
+              }
+            }}
+          >
             Search
           </a>
         </div>

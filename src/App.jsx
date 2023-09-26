@@ -13,13 +13,21 @@ export default function App() {
   const [jobTitle, setJobTitle] = useState("");
   const [location, setLocation] = useState("");
   const [fullTime, setFullTime] = useState(false);
+  const [mobileFullTime, setMobileFullTime] = useState(false);
+  const [mobileLocation, setMobileLocation] = useState("");
   useEffect(() => {
     if (selectedJob) {
       RootFooter(selectedJob);
     }
   }, [selectedJob]);
   useEffect(() => {
-    RootNav(setJobTitle, setLocation, setFullTime);
+    RootNav(
+      setJobTitle,
+      setLocation,
+      setFullTime,
+      setMobileLocation,
+      setMobileFullTime,
+    );
   }, []);
 
   return (
@@ -44,6 +52,19 @@ export default function App() {
           })
           .filter((el) => {
             if (fullTime) {
+              return el.contract == "Full Time";
+            }
+            return true;
+          })
+          .filter((el) => {
+            if (mobileLocation == "") {
+              return true;
+            } else if (mobileLocation != "") {
+              return el.location.includes(mobileLocation);
+            }
+          })
+          .filter((el) => {
+            if (mobileFullTime) {
               return el.contract == "Full Time";
             }
             return true;
