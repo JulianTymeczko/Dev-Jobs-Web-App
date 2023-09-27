@@ -1,7 +1,18 @@
 import "../src/style.css";
 import "../src/component.css";
+import { useEffect, useState } from "react";
+import firstTimeDarkModeReact from "./toggleScheme.js";
+export default function Footer({ title, company, apply, isDarkMode }) {
+  const [dark, setDark] = useState(false);
 
-export default function Footer({ title, company, apply }) {
+  if (isDarkMode && dark == false) {
+    setDark(isDarkMode);
+  }
+  useEffect(() => {
+    if (dark) {
+      firstTimeDarkModeReact();
+    }
+  }, [dark]);
   return (
     <>
       <div>

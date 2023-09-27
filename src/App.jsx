@@ -16,14 +16,19 @@ export default function App() {
   const [fullTime, setFullTime] = useState(false);
   const [mobileFullTime, setMobileFullTime] = useState(false);
   const [mobileLocation, setMobileLocation] = useState("");
+  const [darkMode, setDarkMode] = useState(false);
   useEffect(() => {
     if (selectedJob) {
-      RootFooter(selectedJob);
+      if (document.getElementById("toggleButton").dataset.color == "2") {
+        setDarkMode(true);
+      }
+      RootFooter(selectedJob, darkMode);
+
       if (document.getElementById("toggleButton").dataset.color == "2") {
         firstTimeDarkModeReact();
       }
     }
-  }, [selectedJob]);
+  }, [selectedJob, darkMode]);
   useEffect(() => {
     RootNav(
       setJobTitle,
