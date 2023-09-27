@@ -2,15 +2,11 @@
 
 ## Description
 
-Created from scratch, this application turned Figma files into a pixel-perfect web application. Dev Jobs Web App is a fully responsive site
+I developed the Dev Jobs Web App from scratch, transforming Figma designs into a pixel-perfect web application. I used HTML, CSS, JavaScript, React, ViteJS, and ESLint to create a fully responsive site, ensuring a seamless experience across mobile, tablet, and desktop devices.
 
-across all screen sizes such as mobile, tablet and desktop. This application was built using HTML, CSS, JavaScript, React, ViteJS, and ESLint.
+This application allows users to search and filter potential job opportunities effortlessly. Moreover, it offers in-depth job descriptions, including website links and requirements. 
 
-It allows users to search and filter through potential job opportunities, while also allowing users to click on an individual job and see the
-
-full description of that job including its website and other details like its requirements. This project also features 2 color schemes
-
-that a user can switch between.
+Additionally, I implemented two dynamic color schemes, allowing users to choose their preferred visual style. 
 
 ## Link to Deployed Application
 
