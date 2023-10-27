@@ -96,6 +96,7 @@ export default function App() {
                     {el.contract}
                   </h2>
                   <h1
+                    tabIndex="0"
                     onClick={() => {
                       setScreen(true);
                       setSelectedJob(el);
